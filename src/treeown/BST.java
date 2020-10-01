@@ -85,4 +85,26 @@ public class BST {
         return null;
     }
 
+    public Node recursiveSearch(int value) {
+
+        return recursiveSearch(root, value);
+
+    }
+
+    public Node recursiveSearch(Node root, int value) {
+        if (root == null) {
+            return null;
+        }
+        if (root.getData() == value) {
+            return root;
+        } else if (value < root.getData()) {
+            root = root.getLeftChild();
+            return recursiveSearch(root, value);
+        } else {
+            root = root.getRightChild();
+            return recursiveSearch(root, value);
+        }
+
+    }
+
 }

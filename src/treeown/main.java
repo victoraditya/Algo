@@ -27,15 +27,22 @@ public class main {
 
         bst.printTree(bst.getRoot());
 
-        //Iterative search
+      /*  //Iterative search
         Node searchResultNode = bst.searchIterative(10);
         if (searchResultNode != null) {
             System.out.println("Search Result is : " + searchResultNode.getData());
         } else {
             System.out.println("search value not found in Tree");
-        }
+        }*/
 
         //Recursive Search
+
+        Node serachResult = bst.recursiveSearch(14);
+        if (serachResult != null) {
+            System.out.println("Search Result is : " + serachResult.getData());
+        } else {
+            System.out.println("search value not found in Tree");
+        }
 
     }
 }
